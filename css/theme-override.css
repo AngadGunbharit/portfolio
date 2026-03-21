@@ -195,22 +195,12 @@ body {
 
 /* ---- Skills circles ---- */
 .c100 {
-  background: var(--bg-card) !important;
+  background: #161b27 !important;
   box-shadow: inset 0 0 0 0.08em rgba(99,102,241,0.12);
 }
 
-.c100 > span {
-  color: var(--text) !important;
-  font-weight: 700 !important;
-  font-size: 0.2em !important;
-}
-
 .c100:after {
-  background: var(--bg-card) !important;
-}
-
-.c100:hover > span {
-  color: var(--accent-lt) !important;
+  background: #161b27 !important;
 }
 
 .c100 + h6 {
