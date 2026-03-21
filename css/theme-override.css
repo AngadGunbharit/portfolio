@@ -202,7 +202,6 @@ body {
 .c100 > span {
   color: var(--text) !important;
   font-weight: 700;
-  font-size: 1.1em;
 }
 
 .c100:after {
