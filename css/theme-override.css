@@ -1,0 +1,453 @@
+/* =================================================================== */
+/* MODERN THEME OVERRIDE — Angad Gunbharit Portfolio
+   Dark navy + Indigo accent, glassmorphism, modern typography
+====================================================================== */
+
+/* ---- Custom properties ---- */
+:root {
+  --bg:        #0d1117;
+  --bg-card:   #161b27;
+  --bg-card2:  #1e2435;
+  --border:    rgba(99, 102, 241, 0.18);
+  --accent:    #6366f1;
+  --accent-lt: #818cf8;
+  --accent-2:  #a78bfa;
+  --text:      #e2e8f0;
+  --text-muted:#94a3b8;
+  --radius:    14px;
+  --shadow:    0 8px 32px rgba(0,0,0,0.45);
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ---- Hide style switcher ---- */
+#switcher,
+#showSwitcher {
+  display: none !important;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+/* ---- Base ---- */
+body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Sidebar nav — glassmorphism ---- */
+@media (min-width: 992px) {
+  .header ul.icon-menu {
+    background: rgba(22, 27, 39, 0.72) !important;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-right: 1px solid var(--border);
+    box-shadow: 4px 0 24px rgba(0,0,0,0.3);
+  }
+
+  .header ul.icon-menu li.icon-box {
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: var(--transition);
+  }
+
+  .header ul.icon-menu li.icon-box.active,
+  .header ul.icon-menu li.icon-box:hover {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+  }
+
+  .header .icon-box h2 {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    letter-spacing: 1px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+
+/* ---- Hero (Home) ---- */
+.home h6 {
+  color: var(--text-muted);
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.home h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.home h1 span {
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-details p.open-sans-font {
+  color: var(--text-muted);
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin: 16px 0 28px;
+}
+
+.home .color-block {
+  background: linear-gradient(160deg, #1a1d2e 0%, #0d1117 100%) !important;
+  border-right: 1px solid var(--border);
+}
+
+/* ---- Buttons ---- */
+.btn,
+.btn-about,
+.btn-download,
+.btn-contact {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 12px 32px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+  transition: var(--transition) !important;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
+}
+
+.btn:hover,
+.btn-about:hover,
+.btn-download:hover,
+.btn-contact:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+  box-shadow: 0 6px 28px rgba(99, 102, 241, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+/* ---- Page title section ---- */
+.title-section h1 {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--text);
+}
+
+.title-section h1 span {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-bg {
+  color: rgba(99, 102, 241, 0.06) !important;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+
+/* ---- About: Personal info ---- */
+.about-list .title {
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-list .value {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---- Stats boxes ---- */
+.box-stats {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  padding: 24px 20px !important;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.box-stats:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
+}
+
+.box-stats h3 {
+  font-size: 2.4rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.box-stats p {
+  color: var(--text-muted) !important;
+  font-size: 11px !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* ---- Skills circles ---- */
+.c100 {
+  background: var(--bg-card) !important;
+  box-shadow: inset 0 0 0 0.08em rgba(99,102,241,0.12);
+}
+
+.c100 > span {
+  color: var(--text) !important;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.c100:after {
+  background: var(--bg-card) !important;
+}
+
+.c100:hover > span {
+  color: var(--accent-lt) !important;
+}
+
+.c100 + h6 {
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* ---- Section separator ---- */
+hr.separator {
+  border-top: 1px solid rgba(99, 102, 241, 0.15) !important;
+  margin: 60px auto 50px;
+  max-width: 60%;
+}
+
+/* ---- Custom section titles ---- */
+.custom-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.custom-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #6366f1, #a78bfa);
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.text-sm-center .custom-title::after {
+  margin: 10px auto 0;
+}
+
+/* ---- Experience / Resume timeline ---- */
+.resume-box ul li {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 20px 20px 64px !important;
+  margin-bottom: 20px !important;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.resume-box ul li:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+}
+
+.resume-box .icon {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+  top: 20px !important;
+  left: 14px !important;
+}
+
+.resume-box .icon i {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+}
+
+.resume-box .time {
+  background: rgba(99, 102, 241, 0.12) !important;
+  color: var(--accent-lt) !important;
+  border-radius: 20px;
+  padding: 2px 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.resume-box h5 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 6px 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.resume-box .place {
+  display: block;
+  color: var(--accent-lt) !important;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resume-box .place::before {
+  background: var(--accent-lt) !important;
+}
+
+.resume-box p {
+  color: var(--text-muted) !important;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Hide the old pseudo-element vertical line */
+.resume-box ul li:after {
+  display: none;
+}
+
+/* ---- Contact page ---- */
+.contact .custom-span-contact {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 14px 14px 48px;
+  margin-bottom: 14px;
+  transition: var(--transition);
+}
+
+.contact .custom-span-contact:hover {
+  border-color: rgba(99,102,241,0.4);
+}
+
+.contact .custom-span-contact span {
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact ul.social li a {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.contact ul.social li a:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+  transform: translateY(-3px);
+}
+
+/* ---- Contact form ---- */
+.contact .contactform input[type=text],
+.contact .contactform input[type=email],
+.contact .contactform textarea {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  color: var(--text) !important;
+  transition: var(--transition) !important;
+  padding: 14px 18px !important;
+}
+
+.contact .contactform input[type=text]:focus,
+.contact .contactform input[type=email]:focus,
+.contact .contactform textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+  outline: none !important;
+}
+
+.contact .contactform input::placeholder,
+.contact .contactform textarea::placeholder {
+  color: var(--text-muted) !important;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* ---- Portfolio grid ---- */
+.portfolio .grid li figure div {
+  background: linear-gradient(135deg, rgba(99,102,241,0.85), rgba(139,92,246,0.85)) !important;
+  backdrop-filter: blur(4px);
+}
+
+.portfolio .grid li figure div span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Portfolio slideshow ---- */
+.portfolio .slideshow figure {
+  background: var(--bg-card) !important;
+  border-radius: var(--radius) !important;
+}
+
+.portfolio .slideshow figcaption {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* ---- Mobile menu ---- */
+#menuToggle {
+  border: 1px solid var(--border) !important;
+  background: rgba(22, 27, 39, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+#menu {
+  background: rgba(13, 17, 23, 0.95) !important;
+  border-top: 1px solid var(--border);
+}
+
+#menu li a {
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+#menu li.active a,
+#menu li a:hover {
+  color: var(--accent-lt);
+}
+
+#menuToggle > span {
+  background: var(--text) !important;
+}
+
+/* ---- Preloader ---- */
+.preloader .loader {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: rgba(99, 102, 241, 0.35);
+  color: #fff;
+}
